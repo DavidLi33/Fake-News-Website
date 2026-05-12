@@ -1,0 +1,9 @@
+streamlit
+joblib==1.4.2
+numpy
+scikit-learn==1.5.2
+transformers
+torch
+sentencepiece
+safetensors
+scipy
