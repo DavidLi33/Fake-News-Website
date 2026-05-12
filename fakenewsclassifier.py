@@ -16,11 +16,11 @@ bayes_model = joblib.load('bayes_model.pkl')
 passive_model = joblib.load('passive_model.pkl')
 
 # Load BERT model and tokenizer
-bert_model = BertForSequenceClassification.from_pretrained("davidli33/bertclassifiersample")
+# bert_model = BertForSequenceClassification.from_pretrained("davidli33/bertclassifiersample")
+bert_model = BertForSequenceClassification.from_pretrained("davidli33/bertclassifierbest")
 bert_tokenizer = BertTokenizer.from_pretrained("bert-base-uncased")
 bert_pipe = TextClassificationPipeline(model=bert_model, tokenizer=bert_tokenizer)
 
-# Set up Streamlit app
 st.set_page_config(page_title="Fake News Classifier", page_icon="📰", layout='wide')
 
 st.sidebar.title("📰 Fake News Classifier")
